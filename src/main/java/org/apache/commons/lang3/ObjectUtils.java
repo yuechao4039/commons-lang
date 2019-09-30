@@ -737,9 +737,7 @@ public class ObjectUtils {
             int max = 0;
             for (final Map.Entry<T, MutableInt> e : occurrences.entrySet()) {
                 final int cmp = e.getValue().intValue();
-                if (cmp == max) {
-                    result = null;
-                } else if (cmp > max) {
+                if (cmp > max) {
                     max = cmp;
                     result = e.getKey();
                 }
